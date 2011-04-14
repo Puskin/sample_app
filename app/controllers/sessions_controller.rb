@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     else
       sign_in user
       flash[:success] = "You're logged in as #{ current_user.name }"
-      redirect_to user
+      redirect_back_or user
     end
   end
   
