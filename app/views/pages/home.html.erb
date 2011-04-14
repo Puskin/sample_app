@@ -5,4 +5,8 @@
   sample application.
 </p>
 
+<% if signed_in? %>
+<p>You're such a nice person, <%= current_user.name %>, and you're signed in!</p>
+<% else %>
 <%= link_to "Sing up now!", signup_path, :class => "signup_button round" %>
+<% end %>
